@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "7edfb5c4-8bb5-4a3f-bb09-3e77a17a69a8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-眨眼之间_02(blink_0_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "5f46017c-6c62-42e2-af86-cbccecf3056d",
+      "rawTextureUuid": "7edfb5c4-8bb5-4a3f-bb09-3e77a17a69a8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": -0.5,
+      "trimX": 0,
+      "trimY": 1,
+      "width": 10,
+      "height": 9,
+      "rawWidth": 10,
+      "rawHeight": 10,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

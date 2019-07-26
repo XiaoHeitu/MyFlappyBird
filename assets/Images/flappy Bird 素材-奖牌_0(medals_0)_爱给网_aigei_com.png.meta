@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "fc793f5e-30db-4d4d-8cbe-e6616740525a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-奖牌_0(medals_0)_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "0187d6da-3265-4e64-962a-40ad8742f322",
+      "rawTextureUuid": "fc793f5e-30db-4d4d-8cbe-e6616740525a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0.5,
+      "offsetY": 0,
+      "trimX": 1,
+      "trimY": 0,
+      "width": 43,
+      "height": 44,
+      "rawWidth": 44,
+      "rawHeight": 44,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

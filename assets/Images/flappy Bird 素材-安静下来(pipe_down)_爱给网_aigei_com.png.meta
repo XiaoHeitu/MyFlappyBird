@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "90554728-ab65-44b7-8d96-75053e46fd21",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-安静下来(pipe_down)_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "4221e226-ba89-4f0c-865c-b5923e44e976",
+      "rawTextureUuid": "90554728-ab65-44b7-8d96-75053e46fd21",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 52,
+      "height": 320,
+      "rawWidth": 52,
+      "rawHeight": 320,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

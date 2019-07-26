@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "241cc898-c06e-499b-be25-acea3b324d31",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-教程(tutorial)_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "8ae712e9-6a02-49a8-ab3f-127f080bcf87",
+      "rawTextureUuid": "241cc898-c06e-499b-be25-acea3b324d31",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 114,
+      "height": 98,
+      "rawWidth": 114,
+      "rawHeight": 98,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

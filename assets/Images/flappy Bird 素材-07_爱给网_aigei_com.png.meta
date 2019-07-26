@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "803df664-f2e5-4ff9-8e06-1149a4a5adb2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-07_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "5421a305-4fdd-4fda-bf75-5a24bcc0bca5",
+      "rawTextureUuid": "803df664-f2e5-4ff9-8e06-1149a4a5adb2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 1,
+      "offsetY": 0,
+      "trimX": 4,
+      "trimY": 2,
+      "width": 10,
+      "height": 16,
+      "rawWidth": 16,
+      "rawHeight": 20,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

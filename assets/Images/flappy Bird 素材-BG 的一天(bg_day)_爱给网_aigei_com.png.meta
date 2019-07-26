@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "25e05cd9-aa86-46d3-98b2-3d830cef064b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-BG 的一天(bg_day)_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "783451fc-5eeb-4ac2-9edf-2442bcbfdb59",
+      "rawTextureUuid": "25e05cd9-aa86-46d3-98b2-3d830cef064b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 288,
+      "height": 512,
+      "rawWidth": 288,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

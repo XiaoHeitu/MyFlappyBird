@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "0753b285-2d70-4d65-9a98-64f5784dc4a2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-土地(land)_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "e235840e-d5eb-446f-aaa4-b5dbb0cdef14",
+      "rawTextureUuid": "0753b285-2d70-4d65-9a98-64f5784dc4a2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 336,
+      "height": 112,
+      "rawWidth": 336,
+      "rawHeight": 112,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

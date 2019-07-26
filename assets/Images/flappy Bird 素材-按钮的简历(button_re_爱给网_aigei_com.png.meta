@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "e510fe13-92ce-40b9-b477-a8260d77e95c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-按钮的简历(button_re_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "7a9439cb-18c3-4ee8-8b7e-d2b88bf521cd",
+      "rawTextureUuid": "e510fe13-92ce-40b9-b477-a8260d77e95c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 26,
+      "height": 28,
+      "rawWidth": 26,
+      "rawHeight": 28,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "ver": "2.3.1",
+  "uuid": "21aa9fd8-1323-4a51-a892-5f15b2b4002a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "platformSettings": {},
+  "subMetas": {
+    "flappy Bird 素材-BG 的夜晚(bg_night_爱给网_aigei_com": {
+      "ver": "1.0.4",
+      "uuid": "983c5b2b-53f0-4a9c-bcfc-79767fe1be14",
+      "rawTextureUuid": "21aa9fd8-1323-4a51-a892-5f15b2b4002a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 288,
+      "height": 512,
+      "rawWidth": 288,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
