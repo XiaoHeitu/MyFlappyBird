@@ -8,6 +8,7 @@
       false,
       false,
       true,
+      true,
       true
     ],
     [
@@ -19,6 +20,14 @@
       false,
       true,
       false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      true,
       false
     ]
   ],
@@ -41,7 +50,8 @@
     "default",
     "bird",
     "bg",
-    "pipe"
+    "pipe",
+    "over"
   ],
   "last-module-event-record-time": 0,
   "simulator-orientation": false,
@@ -50,5 +60,6 @@
     "width": 960
   },
   "use-customize-simulator": true,
-  "use-project-simulator-setting": false
+  "use-project-simulator-setting": false,
+  "start-scene": "current"
 }

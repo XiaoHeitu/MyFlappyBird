@@ -13,17 +13,13 @@ import MainScript from "./MainScript";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BGScript extends cc.Component {
+export default class NewClass extends cc.Component {
 
     // @property(cc.Label)
     // label: cc.Label = null;
 
     // @property
     // text: string = 'hello';
-
-    // @property(cc.Sprite)
-    // bg:cc.Sprite=null;
-    
 
     // LIFE-CYCLE CALLBACKS:
 
@@ -39,10 +35,10 @@ export default class BGScript extends cc.Component {
         {
             return;
         }
-        var offest=(dt/1)*40;
+        var offest=(dt/1)*60;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
-
+        
         this.node.width=this.node.width + offest;
         widget.left=oldLeft-offest;
         

@@ -1,0 +1,45 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "CameraClip",
+  "_objFlags": 0,
+  "_native": "",
+  "_duration": 0.3,
+  "sample": 20,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "props": {
+      "x": [
+        {
+          "frame": 0,
+          "value": 2
+        },
+        {
+          "frame": 0.05,
+          "value": -2
+        },
+        {
+          "frame": 0.1,
+          "value": 2
+        },
+        {
+          "frame": 0.15,
+          "value": -2
+        },
+        {
+          "frame": 0.2,
+          "value": 2
+        },
+        {
+          "frame": 0.25,
+          "value": -2
+        },
+        {
+          "frame": 0.3,
+          "value": 0
+        }
+      ]
+    }
+  },
+  "events": []
+}

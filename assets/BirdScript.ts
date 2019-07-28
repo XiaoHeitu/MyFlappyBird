@@ -1,3 +1,5 @@
+import MainScript from "./MainScript";
+
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -13,16 +15,19 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class BirdScript extends cc.Component {
 
-    // @property(cc.Label)
-    // label: cc.Label = null;
+    @property(cc.AudioClip)
+    flyAudio: cc.AudioClip = null;
+    @property(cc.AudioClip)
+    collisionAudio: cc.AudioClip = null;
 
     // @property
     // text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
-    onBeginContact (contact:cc.PhysicsContact, selfCollider:cc.PhysicsCollider, otherCollider:cc.PhysicsCollider) {
-        console.log('on collision enter');
+    onCollisionEnter (other:cc.Collider, self:cc.Collider) {
+        this.Collision();
     }
+    
     onLoad () {
     }
 
@@ -31,8 +36,32 @@ export default class BirdScript extends cc.Component {
 
     update (dt) {
         
-        
     }
 
-    
+    public Fly(){
+        var body=this.getComponent(cc.RigidBody);
+        var curV= body.getLinearVelocityFromWorldPoint(body.getWorldCenter(),null);
+        
+        body.applyLinearImpulse(cc.v2(0,200-curV.y),body.getWorldCenter(),true);
+        this.PlayFlyAudio();
+    }
+    private Collision(){
+        this.PlayCollisionAudio();
+        this.getComponent(cc.Animation).stop();
+        var main=cc.find("Canvas").getComponent(MainScript);
+
+        main.GameOver();
+    }
+
+    private PlayFlyAudio(){
+        var audio=this.getComponent(cc.AudioSource);
+        audio.clip=this.flyAudio;
+        audio.play();
+    }
+
+    private PlayCollisionAudio(){
+        var audio=this.getComponent(cc.AudioSource);
+        audio.clip=this.collisionAudio;
+        audio.play();
+    }
 }

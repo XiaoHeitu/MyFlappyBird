@@ -1,3 +1,5 @@
+import MainScript from "./MainScript";
+
 // Learn TypeScript:
 //  - [Chinese] https://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -35,6 +37,11 @@ export default class PipesScript extends cc.Component {
     }
 
     update (dt) {
+        var main=cc.find("Canvas").getComponent(MainScript);
+        if(main.IsGameOver)
+        {
+            return;
+        }
         var offest=(dt/1)*60;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
@@ -49,25 +56,26 @@ export default class PipesScript extends cc.Component {
 
     
 
+    curMaxLeft=0;
     addNewPipe(){
-        var curMaxLeft=0;
 
-        while(this.node.width>curMaxLeft)
+        while(this.node.width > this.curMaxLeft)
         {
             
-        if(this.node.childrenCount>0){
-            curMaxLeft=this.node.children[this.node.childrenCount-1].getComponent(cc.Widget).left;
-        }
-        var pipe=cc.instantiate(this.downPipe);
+            if(this.node.childrenCount>0){
+                this.curMaxLeft=this.node.children[this.node.childrenCount-1].getComponent(cc.Widget).left;
+            }
+            var pipe=cc.instantiate(this.downPipe);
 
-        pipe.height=this.getRandomInt(100,460);
-        var widget=pipe.getComponent(cc.Widget);
-        widget.left=curMaxLeft+this.getRandomInt(50,200);
+            pipe.height=this.getRandomInt(100,400);
+            var widget=pipe.getComponent(cc.Widget);
+            widget.left=this.curMaxLeft+this.getRandomInt(100,300);
 
-        var box=pipe.getComponent(cc.PhysicsBoxCollider);
-        box.size.height=pipe.height;
+            var box=pipe.getComponent(cc.BoxCollider);        
+            box.size.height=pipe.height;
 
-        this.node.addChild(pipe);
+            this.node.addChild(pipe);
+            this.curMaxLeft=widget.left;
         }
     }
 

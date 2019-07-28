@@ -26,6 +26,9 @@ export default class PipeScript extends cc.Component {
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
+    onBeginContact (contact:cc.PhysicsContact, selfCollider:cc.PhysicsCollider, otherCollider:cc.PhysicsCollider) {
+        console.log('on collision enter');
+    }
 
     start () {
         
