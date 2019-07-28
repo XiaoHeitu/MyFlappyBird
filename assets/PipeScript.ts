@@ -11,7 +11,7 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class NewClass extends cc.Component {
+export default class PipeScript extends cc.Component {
 
     // @property(cc.Label)
     // label: cc.Label = null;
@@ -28,16 +28,11 @@ export default class NewClass extends cc.Component {
     // onLoad () {}
 
     start () {
-
+        
     }
 
     update (dt) {
-        var offest=(dt/1)*50;
-        this.node.width=this.node.width + offest;
-        var widget=this.getComponent(cc.Widget);
-        widget.left=widget.left-offest;
-
-        console.log(widget.left);
-
+        var widget=this.getComponent(cc.Widget);        
+        widget.updateAlignment();
     }
 }

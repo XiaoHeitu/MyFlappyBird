@@ -11,10 +11,13 @@
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class BGScript extends cc.Component {
+export default class PipesScript extends cc.Component {
 
-    // @property(cc.Label)
-    // label: cc.Label = null;
+    @property(cc.Prefab)
+    downPipe: cc.Prefab = null;
+
+    @property(cc.Prefab)
+    upPipe: cc.Prefab = null;
 
     // @property
     // text: string = 'hello';
@@ -28,17 +31,48 @@ export default class BGScript extends cc.Component {
     // onLoad () {}
 
     start () {
-
+        
     }
 
     update (dt) {
-        var offest=(dt/1)*40;
+        var offest=(dt/1)*60;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
-
+        
         this.node.width=this.node.width + offest;
         widget.left=oldLeft-offest;
         
+        this.addNewPipe();
+
         widget.updateAlignment();
+    }
+
+    
+
+    addNewPipe(){
+        var curMaxLeft=0;
+
+        while(this.node.width>curMaxLeft)
+        {
+            
+        if(this.node.childrenCount>0){
+            curMaxLeft=this.node.children[this.node.childrenCount-1].getComponent(cc.Widget).left;
+        }
+        var pipe=cc.instantiate(this.downPipe);
+
+        pipe.height=this.getRandomInt(100,460);
+        var widget=pipe.getComponent(cc.Widget);
+        widget.left=curMaxLeft+this.getRandomInt(50,200);
+
+        var box=pipe.getComponent(cc.PhysicsBoxCollider);
+        box.size.height=pipe.height;
+
+        this.node.addChild(pipe);
+        }
+    }
+
+    getRandomInt(min:number,max:number):number{
+        var r=Math.random();
+        return Math.trunc( min+(r*(max+1-min)));
     }
 }

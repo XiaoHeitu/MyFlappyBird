@@ -7,11 +7,18 @@
     [
       false,
       false,
+      true,
       true
     ],
     [
       false,
       true,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
       false
     ]
   ],
@@ -33,7 +40,8 @@
   "group-list": [
     "default",
     "bird",
-    "bg"
+    "bg",
+    "pipe"
   ],
   "last-module-event-record-time": 0,
   "simulator-orientation": false,

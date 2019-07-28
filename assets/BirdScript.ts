@@ -20,12 +20,13 @@ export default class BirdScript extends cc.Component {
     // text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
-
+    onBeginContact (contact:cc.PhysicsContact, selfCollider:cc.PhysicsCollider, otherCollider:cc.PhysicsCollider) {
+        console.log('on collision enter');
+    }
     onLoad () {
     }
 
     start () {
-
     }
 
     update (dt) {

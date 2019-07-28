@@ -23,6 +23,11 @@ export default class MainScript extends cc.Component {
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
+        var manager = cc.director.getCollisionManager();
+        manager.enabled = true;
+        manager.enabledDebugDraw = true;
+        manager.enabledDrawBoundingBox=true;
+        
         this.node.on('touchstart', this.onTouchStart,this);
     }
 
@@ -33,6 +38,6 @@ export default class MainScript extends cc.Component {
     // update (dt) {}
     onTouchStart(event:cc.Event.EventTouch){
         var body=this.bird.getComponent(cc.RigidBody);
-        body.applyLinearImpulse(cc.v2(0,50), body.getWorldCenter(),true);
+        body.applyLinearImpulse(cc.v2(0,100), body.getWorldCenter(),true);
     }
 }
