@@ -39,7 +39,7 @@ export default class BGScript extends cc.Component {
         {
             return;
         }
-        var offest=(dt/1)*40;
+        var offest=(dt/1)*40*main.speed;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
 

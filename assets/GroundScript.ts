@@ -35,7 +35,7 @@ export default class NewClass extends cc.Component {
         {
             return;
         }
-        var offest=(dt/1)*60;
+        var offest=(dt/1)*60*main.speed;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
         

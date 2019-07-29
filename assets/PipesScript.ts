@@ -42,7 +42,7 @@ export default class PipesScript extends cc.Component {
         {
             return;
         }
-        var offest=(dt/1)*60;
+        var offest=(dt/1)*60*main.speed;
         var widget=this.getComponent(cc.Widget);
         var oldLeft=widget.left;
         
@@ -57,26 +57,61 @@ export default class PipesScript extends cc.Component {
     
 
     curMaxLeft=0;
+
     addNewPipe(){
 
         while(this.node.width > this.curMaxLeft)
-        {
+        {            
+            // if(this.node.childrenCount>0){
+            //     this.curMaxLeft=this.node.children[this.node.childrenCount-1].getComponent(cc.Widget).left;
+            // }
             
-            if(this.node.childrenCount>0){
-                this.curMaxLeft=this.node.children[this.node.childrenCount-1].getComponent(cc.Widget).left;
+            var type=this.getRandomInt(0,2);
+            switch(type){
+                case 0:{
+                    this.addNewDownPipe();
+                    break;
+                }
+                case 1:{
+                    this.addNewUpPipe();
+                    break;
+                }
+                case 2:{
+                    this.addNewBothPipe();
+                    break;
+                }
             }
-            var pipe=cc.instantiate(this.downPipe);
-
-            pipe.height=this.getRandomInt(100,400);
-            var widget=pipe.getComponent(cc.Widget);
-            widget.left=this.curMaxLeft+this.getRandomInt(100,300);
-
-            var box=pipe.getComponent(cc.BoxCollider);        
-            box.size.height=pipe.height;
-
-            this.node.addChild(pipe);
-            this.curMaxLeft=widget.left;
         }
+    }
+
+    addNewDownPipe(){
+        var pipe=cc.instantiate(this.downPipe);
+
+        pipe.height=this.getRandomInt(200,300);
+        var widget=pipe.getComponent(cc.Widget);
+        widget.left=this.curMaxLeft+this.getRandomInt(200,500);
+
+        var box=pipe.getComponent(cc.BoxCollider);        
+        box.size.height=pipe.height;
+
+        this.node.addChild(pipe);
+        this.curMaxLeft=widget.left;
+    }
+    addNewUpPipe(){
+        var pipe=cc.instantiate(this.upPipe);
+
+        pipe.height=this.getRandomInt(100,300);
+        var widget=pipe.getComponent(cc.Widget);
+        widget.left=this.curMaxLeft+this.getRandomInt(200,500);
+
+        var box=pipe.getComponent(cc.BoxCollider);        
+        box.size.height=pipe.height;
+
+        this.node.addChild(pipe);
+        this.curMaxLeft=widget.left;
+    }
+    addNewBothPipe(){
+        
     }
 
     getRandomInt(min:number,max:number):number{

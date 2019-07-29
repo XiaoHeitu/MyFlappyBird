@@ -15,6 +15,9 @@ const {ccclass, property} = cc._decorator;
 @ccclass
 export default class MainScript extends cc.Component {
 
+    @property(Number)
+    public speed: number = 1;
+    
     @property(cc.Sprite)
     bird: cc.Sprite = null;
 
@@ -28,7 +31,8 @@ export default class MainScript extends cc.Component {
     // text: string = 'hello';
 
     // LIFE-CYCLE CALLBACKS:
-    public IsGameOver=false;
+    @property(Boolean)
+    public IsGameOver=true;
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -46,6 +50,7 @@ export default class MainScript extends cc.Component {
 
     initBGW=0;
     update (dt) {
+        this.speed+=dt/10;
        var bgW= cc.find("Canvas/BG").width;
        var gw= cc.find("Canvas/Ground").width;
        var pc= cc.find("Canvas/Pipes").childrenCount;
@@ -86,12 +91,13 @@ export default class MainScript extends cc.Component {
         cc.find("Canvas/Reset").active=false; 
         cc.find("Canvas/Pipes").removeAllChildren();
         this.initBGW= cc.find("Canvas/BG").width;
+        this.speed=1;
         this.scoring.string="0";
         this.bird.node.position=cc.v2(0,0);
         this.IsGameOver=false;
         var body=this.bird.getComponent(cc.RigidBody);
         var velocity=body.getLinearVelocityFromWorldPoint(body.getWorldCenter(),null);
         body.applyLinearImpulse(cc.v2(0,0-velocity.y),body.getWorldCenter(),true);
-
+        this.bird.getComponent(cc.Animation).play();
     }
 }
