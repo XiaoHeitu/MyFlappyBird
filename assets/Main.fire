@@ -1393,7 +1393,7 @@
     "_position": {
       "__type__": "cc.Vec3",
       "x": 0,
-      "y": -265,
+      "y": -145,
       "z": 0
     },
     "_scale": {
@@ -1428,7 +1428,7 @@
     "_left": -10,
     "_right": -10,
     "_top": 0,
-    "_bottom": -30,
+    "_bottom": 90,
     "_verticalCenter": 0,
     "_horizontalCenter": 0,
     "_isAbsLeft": true,

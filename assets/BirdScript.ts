@@ -46,9 +46,12 @@ export default class BirdScript extends cc.Component {
         this.PlayFlyAudio();
     }
     private Collision(){
+        var main=cc.find("Canvas").getComponent(MainScript);
+        if(main.IsGameOver){
+            return;
+        }
         this.PlayCollisionAudio();
         this.getComponent(cc.Animation).stop();
-        var main=cc.find("Canvas").getComponent(MainScript);
 
         main.GameOver();
     }

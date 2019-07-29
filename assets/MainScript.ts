@@ -83,8 +83,7 @@ export default class MainScript extends cc.Component {
         this.IsGameOver=true;
         var animation=cc.find("Canvas/Main Camera").getComponent(cc.Animation);
         animation.play(null,null);
-        cc.find("Canvas/Reset").active=true; 
-        var body=this.bird.getComponent(cc.RigidBody);   
+        cc.find("Canvas/Reset").active=true;
     }
 
     onReset(){
